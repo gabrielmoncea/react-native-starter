@@ -2,10 +2,11 @@
   "engines": {
     "node": "^12.16.0"
   },
-  "name": "react-native-bootstrap",
+  "name": "react-native-starter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "installproj": "yarn; cd ios; pod install; cd ../",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
