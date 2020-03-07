@@ -19,3 +19,27 @@
 ### Android
 
 `yarn android`
+
+## Renaming react native project
+
+### iOS
+
+1. Change bundle ID in Xcode
+1. Change remaining folder and file names
+
+Related issues [here](https://stackoverflow.com/questions/37908339/could-not-automatically-select-an-xcode-project)
+
+### Android
+
+1. Replace `reactnativestarter` string everywhere in `/android` folder\
+`settings.gradle`\
+`app/build.gradle`\
+`app/BUCK`\
+`app/src/main/AndroidManifest.xml`\
+`app/src/main/java/com/reactnativestarter/MainActivity.java`\
+`app/src/main/java/com/reactnativestarter/MainApplication.java`\
+`app/src/main/res/values/strings.xml`\
+
+1. Change `app/src/main/java/com/reactnativestarter` folder name
+
+Related issues [here](https://github.com/facebook/react-native/issues/24616)
