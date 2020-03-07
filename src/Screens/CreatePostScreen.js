@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, TextInput } from 'react-native';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { createPost } from '../Redux/Reducers/PostReducer';
 
-export default function CreatePostScreen({ navigation, route }) {
-  const [postText, setPostText] = useState('');
+function CreatePostScreen({ navigation }) {
+  const text = useSelector(state => state.post.text);
+  const dispatch = useDispatch();
+
+  const onChangeText = text => {
+    dispatch(createPost(text));
+  };
 
   return (
     <>
@@ -10,16 +17,17 @@ export default function CreatePostScreen({ navigation, route }) {
         multiline
         placeholder="What's on your mind?"
         style={{ height: 200, padding: 10, backgroundColor: 'white' }}
-        value={postText}
-        onChangeText={setPostText}
+        value={text}
+        onChangeText={onChangeText}
       />
       <Button
         title='Done'
         onPress={() => {
-          // Pass params back to home screen
-          navigation.navigate('Home', { post: postText });
+          navigation.navigate('Home');
         }}
       />
     </>
   );
 }
+
+export default connect(state => ({ ...state }))(CreatePostScreen);
