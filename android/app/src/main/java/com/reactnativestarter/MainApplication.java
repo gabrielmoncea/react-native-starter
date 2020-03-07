@@ -1,4 +1,4 @@
-package com.reactnativebootstrap;
+package com.reactnativestarter;
 
 import android.app.Application;
 import android.content.Context;

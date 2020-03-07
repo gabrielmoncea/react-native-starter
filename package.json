@@ -2,14 +2,31 @@
   "engines": {
     "node": "^12.16.0"
   },
-  "name": "react-native-starter",
+  "name": "reactnativestarter",
   "version": "0.0.1",
-  "private": true,
+  "author": "gabrielmoncea",
+  "description": "React Native starter with react-navigation, react-redux, styled-components and @welldone-software/why-did-you-render",
+  "keywords": [
+    "react-native",
+    "react-navigation",
+    "react-redux",
+    "styled-components",
+    "@welldone-software/why-did-you-render",
+    "starter"
+  ],
+  "license": "MIT",
   "scripts": {
     "installproj": "yarn; cd ios; pod install; cd ../",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "start": "react-native start",
+    "ios": "react-native run-ios",
+    "adb": "adb devices",
+    "adbusb": "adb usb",
+    "adbshell": "adb shell",
+    "adbkill": "adb kill-server",
+    "adbstart": "adb start-server",
+    "adbreverse": "adb reverse tcp:8081 tcp:8081",
+    "android": "react-native run-android",
+    "androidclean": "cd android; ./gradlew clean; cd ../",
     "test": "jest",
     "lint": "eslint ."
   },
