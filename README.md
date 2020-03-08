@@ -27,6 +27,9 @@
 
 1. Change bundle ID in Xcode
 1. Change remaining folder and file names
+1. Run the following commands
+`pod deintegrate`
+`pod install`
 
 Related issues [here](https://stackoverflow.com/questions/37908339/could-not-automatically-select-an-xcode-project)
 
