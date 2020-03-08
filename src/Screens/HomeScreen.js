@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { useSelector } from 'react-redux';
+import Snyk from '../../assets/snyk.svg';
+import Firefox from '../../assets/firefox.svg';
 
 const MemoizedComponent = React.memo(() => <View />);
 const RerenderedComponent = () => <View />;
@@ -18,6 +20,17 @@ export default function HomeScreen({ navigation }) {
       <RerenderedComponent />
       <Text>Increment: {state}</Text>
       <Button title='Increment' onPress={() => increment(state + 1)} />
+      <View
+        style={{
+          height: 100,
+          width: '100%',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-around',
+        }}>
+        <Firefox height={'80px'} />
+        <Snyk height={'80px'} />
+      </View>
       <Button
         title='Go to Details'
         onPress={() => {
