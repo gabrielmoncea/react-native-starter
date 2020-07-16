@@ -1,7 +1,4 @@
 {
-  "engines": {
-    "node": "^12.16.0"
-  },
   "name": "reactnativestarter",
   "version": "0.0.2",
   "author": "gabrielmoncea",
